@@ -24,4 +24,10 @@
     element.innerText = `${username} has joined.`;
     document.getElementById("messages").appendChild(element);
   });
+
+  socket.on("leftChat", (username) => {
+    const element = document.createElement("h5");
+    element.innerText = `${username} has left.`;
+    document.getElementById("messages").appendChild(element);
+  });
 </script>
